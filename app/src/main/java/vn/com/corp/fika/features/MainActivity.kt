@@ -7,16 +7,18 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import vn.com.corp.fika.R
 import vn.com.corp.fika.databinding.ActivityMainBinding
+import vn.com.corp.fika.util.AdapterImageSlider
 import vn.com.corp.fika.viewmodel.MainViewModel
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var mViewBinding: ActivityMainBinding
     private val viewModel by viewModels<MainViewModel>()
+    private val imageAdapter: AdapterImageSlider by lazy { AdapterImageSlider() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(
+        mViewBinding = DataBindingUtil.setContentView(
             this,
             R.layout.activity_main
         )
@@ -25,13 +27,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun init() {
-
+        viewModel.getUserProfile()
     }
 
     private fun setUpViewModels() {
         viewModel.userProfileLiveData.observe(this, Observer {
-            binding.data = it
-            binding.executePendingBindings()
+            mViewBinding.data = it
+            mViewBinding.executePendingBindings()
+            it.profile?.images?.let { imageList ->
+                imageAdapter.setItems(imageList.filterNotNull())
+                mViewBinding.pager.adapter = imageAdapter
+                mViewBinding.pager.currentItem = 0
+                mViewBinding.tabDots.setupWithViewPager(mViewBinding.pager)
+            }
         })
     }
 }
