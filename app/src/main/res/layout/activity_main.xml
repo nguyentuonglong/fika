@@ -56,24 +56,22 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imgAvatar" />
 
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabDots"
-                style="@style/Widget.Design.TabLayout"
+            <me.huseyinozer.TooltipIndicator
+                android:id="@+id/indicator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_marginStart="@dimen/margin_25"
-                android:elevation="5dp"
+                android:layout_marginTop="@dimen/margin_20"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/pager"
-                app:tabBackground="@drawable/tab_pager_selector"
-                app:tabGravity="center"
-                app:tabIndicatorHeight="0dp" />
+                app:ti_lineHeight="3dp"
+                app:ti_lineMargin="3dp"
+                app:ti_lineWidth="6dp"
+                app:ti_lineWidthSelected="20dp"
+                app:ti_selectedLineDrawable="@drawable/selected_pager_dot"
+                app:ti_unselectedLineDrawable="@drawable/default_pager_dot" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
-
-
 </layout>

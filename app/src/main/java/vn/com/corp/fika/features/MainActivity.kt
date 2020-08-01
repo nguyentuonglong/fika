@@ -37,8 +37,8 @@ class MainActivity : AppCompatActivity() {
             it.profile?.images?.let { imageList ->
                 imageAdapter.setItems(imageList.filterNotNull())
                 mViewBinding.pager.adapter = imageAdapter
+                mViewBinding.indicator.setupViewPager(mViewBinding.pager)
                 mViewBinding.pager.currentItem = 0
-                mViewBinding.tabDots.setupWithViewPager(mViewBinding.pager)
             }
         })
     }
