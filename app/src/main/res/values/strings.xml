@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Fika</string>
+    <string name="dob_holder">%s, %d years old</string>
 </resources>

@@ -8,6 +8,7 @@ import androidx.lifecycle.Observer
 import vn.com.corp.fika.R
 import vn.com.corp.fika.databinding.ActivityMainBinding
 import vn.com.corp.fika.util.AdapterImageSlider
+import vn.com.corp.fika.util.Utils
 import vn.com.corp.fika.viewmodel.MainViewModel
 
 class MainActivity : AppCompatActivity() {
@@ -39,6 +40,11 @@ class MainActivity : AppCompatActivity() {
                 mViewBinding.pager.adapter = imageAdapter
                 mViewBinding.indicator.setupViewPager(mViewBinding.pager)
                 mViewBinding.pager.currentItem = 0
+            }
+            it.profile?.birthdate?.let { dobAsLong ->
+                val dob = Utils.convertToDob(dobAsLong)
+                val old = Utils.getYearOld(dobAsLong)
+                mViewBinding.tvDob.text = String.format(getString(R.string.dob_holder), dob, old)
             }
         })
     }

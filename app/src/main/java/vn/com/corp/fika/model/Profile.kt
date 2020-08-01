@@ -7,7 +7,7 @@ data class Profile(
     @SerializedName("bio")
     val bio: String? = "",
     @SerializedName("birthdate")
-    val birthdate: Int? = 0,
+    val birthdate: Long? = 0,
     @SerializedName("education")
     val education: String? = "",
     @SerializedName("hobbies")
