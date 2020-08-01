@@ -80,7 +80,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/indicator">
 
                 <TextView
-                    style="@style/TextUserName.Bold"
+                    style="@style/TextUserName.Bold.s24"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@{data.profile.name}"
@@ -88,7 +88,7 @@
 
                 <TextView
                     android:id="@+id/tvDob"
-                    style="@style/TextUserName.Normal"
+                    style="@style/TextUserName.Normal.s16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_bod"
@@ -98,7 +98,7 @@
                     tools:text="Amy Nguyen" />
 
                 <TextView
-                    style="@style/TextUserName.Normal"
+                    style="@style/TextUserName.Normal.s16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_work"
@@ -108,7 +108,7 @@
                     tools:text="Amy Nguyen" />
 
                 <TextView
-                    style="@style/TextUserName.Normal"
+                    style="@style/TextUserName.Normal.s16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_graduated"
@@ -118,7 +118,7 @@
                     tools:text="Amy Nguyen" />
 
                 <TextView
-                    style="@style/TextUserName.Normal"
+                    style="@style/TextUserName.Normal.s16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingVertical="@dimen/padding_5"

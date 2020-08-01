@@ -33,7 +33,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun init() {
         viewModel.getUserProfile()
-
         mViewBinding.recyclerView.layoutManager = GridLayoutManager(this, 2).also {
             it.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
                 override fun getSpanSize(position: Int): Int {
@@ -63,8 +62,8 @@ class MainActivity : AppCompatActivity() {
                 val old = Utils.getYearOld(dobAsLong)
                 mViewBinding.tvDob.text = String.format(getString(R.string.dob_holder), dob, old)
             }
-            it.profile?.moment?.get(0)?.images?.filterNotNull()
-                ?.let { listOfUrl -> adapter.setData(listOfUrl) }
+            //TODO: moment is a list so make a recyclerView hold list of moment, then item is a Grid recyclerView
+            adapter.setData(it.profile?.moment?.get(0))
         })
     }
 }

@@ -8,4 +8,5 @@
     <color name="color_selected_indicator">#4BA9FF</color>
     <color name="color_default_indicator">#C0DFFB</color>
     <color name="color_text_bio">#969696</color>
+    <color name="color_white">#FFFFFF</color>
 </resources>

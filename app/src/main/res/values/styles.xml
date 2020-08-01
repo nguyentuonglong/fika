@@ -20,13 +20,17 @@
         <item name="android:textColor">@color/text_color</item>
     </style>
 
-    <style name="TextUserName.Bold" parent="TextUserName">
+    <style name="TextUserName.Bold.s24" parent="TextUserName">
         <item name="android:textSize">@dimen/text_size_24</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="TextUserName.Normal" parent="TextUserName">
+    <style name="TextUserName.Normal.s16" parent="TextUserName">
         <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="TextUserName.Normal.s18" parent="TextUserName">
+        <item name="android:textSize">@dimen/text_size_18</item>
     </style>
 
     <style name="MuliTextViewStyle" parent="android:Widget.TextView">
