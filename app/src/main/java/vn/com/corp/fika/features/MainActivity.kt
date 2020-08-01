@@ -1,8 +1,16 @@
 package vn.com.corp.fika.features
 
+import android.R.attr.scaleY
+import android.animation.Animator
+import android.animation.Animator.AnimatorListener
+import android.animation.ObjectAnimator
+import android.animation.PropertyValuesHolder
+import android.animation.ValueAnimator
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.animation.addListener
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
@@ -13,6 +21,7 @@ import vn.com.corp.fika.util.AdapterImageSlider
 import vn.com.corp.fika.util.SpaceItemDecoration
 import vn.com.corp.fika.util.Utils
 import vn.com.corp.fika.viewmodel.MainViewModel
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -45,6 +54,18 @@ class MainActivity : AppCompatActivity() {
         }
         mViewBinding.recyclerView.addItemDecoration(SpaceItemDecoration(5));
         mViewBinding.recyclerView.adapter = adapter
+        mViewBinding.imgHeart.setOnClickListener {
+            (it as ImageView).setImageResource(R.drawable.ic_filled_favorite_24)
+            val scaleDown: ValueAnimator? = ObjectAnimator.ofPropertyValuesHolder(
+                it,
+                PropertyValuesHolder.ofFloat("scaleX", 1.2f),
+                PropertyValuesHolder.ofFloat("scaleY", 1.2f)
+            )
+            scaleDown?.duration = 300
+            scaleDown?.repeatCount = 3
+            scaleDown?.repeatMode = ObjectAnimator.RESTART
+            scaleDown?.start()
+        }
     }
 
     private fun setUpViewModels() {
