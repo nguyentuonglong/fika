@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@android:id/background">
-        <shape android:shape="line">
-            <stroke android:width="3dp"  android:color="@color/color_bg_seekbar" />
+    <item
+        android:id="@android:id/background"
+        android:bottom="4dp"
+        android:top="4dp">
+        <shape>
+            <corners android:radius="8dp" />
+            <solid android:color="@color/color_bg_seekbar" />
         </shape>
     </item>
-    <item android:id="@android:id/progress">
+
+    <item
+        android:id="@android:id/progress"
+        android:bottom="4dp"
+        android:top="4dp">
         <clip>
-            <shape android:shape="line">
-                <stroke android:width="3dp"  android:color="@color/color_heart" />
+            <shape>
+                <corners android:radius="8dp" />
+                <solid android:color="@color/color_heart" />
             </shape>
         </clip>
     </item>
-
 </layer-list>
+

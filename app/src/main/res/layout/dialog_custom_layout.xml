@@ -10,10 +10,10 @@
         style="@style/TextUserName.Bold.s14"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
         android:layout_marginTop="@dimen/margin_10"
         android:drawableStart="@drawable/ic_filled_favorite_24"
         android:drawablePadding="@dimen/padding_5"
+        android:gravity="center_vertical"
         android:text="@string/how_much_do_you_like_amy" />
 
 
@@ -24,13 +24,11 @@
         android:layout_marginVertical="@dimen/margin_20"
         app:dsbv_infoDrawable="@drawable/ic_filled_favorite_44"
         app:dsbv_infoInitText="@string/init_info_text"
-        app:dsbv_infoRadius="30"
         app:dsbv_infoTextColor="@android:color/white"
         app:dsbv_infoTextSize="11dp"
         app:dsbv_max="100"
         app:dsbv_progress="50"
-        app:dsbv_progressBackgroundColor="@color/color_bg_seekbar"
-        app:dsbv_progressColor="@color/color_heart"
+        app:dsbv_progressDrawable="@drawable/progress_drawable_default"
         app:dsbv_thumbDrawable="@drawable/seek_bar_slider" />
 
     <Button
