@@ -1,11 +1,14 @@
 package vn.com.corp.fika.features
 
+import android.animation.Animator
 import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
 import android.animation.ValueAnimator
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import androidx.activity.viewModels
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -61,6 +64,21 @@ class MainActivity : AppCompatActivity() {
             scaleDown?.repeatCount = 3
             scaleDown?.repeatMode = ObjectAnimator.RESTART
             scaleDown?.start()
+            scaleDown?.addListener(object : Animator.AnimatorListener {
+                override fun onAnimationRepeat(animation: Animator?) {
+                }
+
+                override fun onAnimationEnd(animation: Animator?) {
+                    showLikeDialog();
+                }
+
+                override fun onAnimationCancel(animation: Animator?) {
+                }
+
+                override fun onAnimationStart(animation: Animator?) {
+                }
+
+            })
         }
     }
 
@@ -82,5 +100,16 @@ class MainActivity : AppCompatActivity() {
             //TODO: moment is a list so make a recyclerView hold list of moment, then item is a Grid recyclerView
             adapter.setData(it.profile?.moment?.get(0))
         })
+    }
+
+    private fun showLikeDialog() {
+        val dialogView = layoutInflater.inflate(R.layout.dialog_custom_layout, null)
+        val customDialog = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .show()
+        val btDismiss = dialogView.findViewById<Button>(R.id.btDismissCustomDialog)
+        btDismiss.setOnClickListener {
+            customDialog.dismiss()
+        }
     }
 }
