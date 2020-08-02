@@ -81,6 +81,21 @@
                 android:padding="@dimen/padding_20"
                 app:layout_constraintTop_toBottomOf="@+id/indicator">
 
+                <vn.com.corp.fika.util.customview.DynamicSeekBarView
+                    android:id="@+id/dynamicSeekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:dsbv_infoDrawable="@drawable/ic_filled_favorite_24"
+                    app:dsbv_infoInitText="@string/init_info_text"
+                    app:dsbv_infoRadius="30"
+                    app:dsbv_infoTextColor="@android:color/white"
+                    app:dsbv_infoTextSize="11dp"
+                    app:dsbv_max="100"
+                    app:dsbv_progress="50"
+                    app:dsbv_progressBackgroundColor="@color/color_bg_seekbar"
+                    app:dsbv_progressColor="@color/color_heart"
+                    app:dsbv_thumbDrawable="@drawable/seek_bar_slider" />
+
                 <TextView
                     style="@style/TextUserName.Bold.s24"
                     android:layout_width="wrap_content"

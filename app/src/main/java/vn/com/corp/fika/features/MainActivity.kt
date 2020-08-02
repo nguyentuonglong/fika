@@ -1,8 +1,5 @@
 package vn.com.corp.fika.features
 
-import android.R.attr.scaleY
-import android.animation.Animator
-import android.animation.Animator.AnimatorListener
 import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
 import android.animation.ValueAnimator
@@ -10,7 +7,6 @@ import android.os.Bundle
 import android.widget.ImageView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.animation.addListener
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager

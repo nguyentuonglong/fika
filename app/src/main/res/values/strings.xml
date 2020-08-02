@@ -3,4 +3,5 @@
     <string name="dob_holder">%s, %d years old</string>
     <string name="happy">Happy</string>
     <string name="da_lat">Da Lat</string>
+    <string name="init_info_text">0</string>
 </resources>
