@@ -85,7 +85,7 @@
                     android:id="@+id/dynamicSeekbar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:dsbv_infoDrawable="@drawable/ic_filled_favorite_24"
+                    app:dsbv_infoDrawable="@drawable/ic_filled_favorite_44"
                     app:dsbv_infoInitText="@string/init_info_text"
                     app:dsbv_infoRadius="30"
                     app:dsbv_infoTextColor="@android:color/white"
