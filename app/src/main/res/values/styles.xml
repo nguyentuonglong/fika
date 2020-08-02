@@ -38,6 +38,10 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="TextUserName.Normal.s11" parent="TextUserName">
+        <item name="android:textSize">@dimen/text_size_11</item>
+    </style>
+
     <style name="MuliTextViewStyle" parent="android:Widget.TextView">
         <item name="android:fontFamily">@font/muli</item>
     </style>

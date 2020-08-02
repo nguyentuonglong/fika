@@ -15,9 +15,12 @@
         android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fitsSystemWindows="true">
+            android:fitsSystemWindows="true"
+            android:visibility="gone"
+            tools:visibility="visible">
 
             <ImageView
                 android:id="@+id/imgAvatar"
@@ -100,6 +103,7 @@
                     tools:text="Amy Nguyen" />
 
                 <TextView
+                    android:id="@+id/tvWork"
                     style="@style/TextUserName.Normal.s16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -110,6 +114,7 @@
                     tools:text="Amy Nguyen" />
 
                 <TextView
+                    android:id="@+id/tvEdu"
                     style="@style/TextUserName.Normal.s16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

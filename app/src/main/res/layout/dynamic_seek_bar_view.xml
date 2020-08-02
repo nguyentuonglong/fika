@@ -16,6 +16,7 @@
 
         <TextView
             android:id="@+id/tvInfo"
+            style="@style/TextUserName.Normal.s11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_filled_favorite_44"
